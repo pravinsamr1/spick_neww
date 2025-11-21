@@ -233,37 +233,45 @@
                         <h4 class="title-2">Get A Quote</h4>
                         <form id="contact-form" action="mail.php" method="post">
                             <div class="row">
+                        
                                 <div class="col-md-6">
                                     <div class="input-item input-item-name ltn__custom-icon">
-                                        <input type="text" name="name" placeholder="Enter your name">
+                                        <input type="text" name="name" placeholder="Enter your name" required>
                                     </div>
                                 </div>
+                        
                                 <div class="col-md-6">
                                     <div class="input-item input-item-phone ltn__custom-icon">
-                                        <input type="email" name="phone" placeholder="Enter phone Number">
+                                        <input type="text" name="phone" placeholder="Enter phone Number" required>
                                     </div>
                                 </div>
+                        
                                 <div class="col-md-6">
                                     <div class="input-item">
-                                        <select class="nice-select">
+                                        <select class="nice-select" name="service" required>
                                             <option>Select Service Type</option>
                                             <option>Water Tank Cleaning</option>
                                             <option>Sump Cleaning</option>
                                         </select>
                                     </div>
                                 </div>
+                        
                                 <div class="col-md-6">
                                     <div class="input-item input-item-email ltn__custom-icon">
-                                        <input type="text" name="email" placeholder="Enter E-mail">
+                                        <input type="email" name="email" placeholder="Enter E-mail" required>
                                     </div>
                                 </div>
+                        
                             </div>
+                        
                             <div class="input-item input-item-textarea ltn__custom-icon">
-                                <textarea name="message" placeholder="Enter message"></textarea>
+                                <textarea name="message" placeholder="Enter message" required></textarea>
                             </div>
+                        
                             <div class="btn-wrapper mt-0">
                                 <button class="btn theme-btn-1 btn-effect-1 text-uppercase" type="submit">Submit</button>
                             </div>
+                        
                             <p class="form-messege mb-0 mt-20"></p>
                         </form>
                     </div>
