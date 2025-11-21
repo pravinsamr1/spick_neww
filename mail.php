@@ -1,43 +1,50 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'PHPMailer-master/src/Exception.php';
+require 'PHPMailer-master/src/PHPMailer.php';
+require 'PHPMailer-master/src/SMTP.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $name = strip_tags(trim($_POST["name"]));
-    $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
-    $phone = trim($_POST["phone"]);
-    $service = trim($_POST["service"]);
-    $message = trim($_POST["message"]);
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $phone = $_POST["phone"];
+    $service = $_POST["service"];
+    $message = $_POST["message"];
 
-    if ( empty($name) || empty($message) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        http_response_code(400);
-        echo "Please complete the form and try again.";
-        exit;
+    $mail = new PHPMailer(true);
+
+    try {
+        $mail->isSMTP();
+        $mail->Host = 'smtp.gmail.com';
+        $mail->SMTPAuth = true;
+
+        $mail->Username = 'pravinsamr@gmail.com';
+        $mail->Password = 'iqimxmrwfnwqacwg'; // Gmail App Password
+
+        $mail->SMTPSecure = 'tls';
+        $mail->Port = 587;
+
+        $mail->setFrom('pravinsamr@gmail.com', 'Website Contact Form');
+        $mail->addAddress('pravinsamr@gmail.com');
+
+        $mail->Subject = "New Contact Form Submission";
+        $mail->Body = "
+Name: $name
+Email: $email
+Phone: $phone
+Service: $service
+
+Message:
+$message
+";
+
+        $mail->send();
+        echo "Message sent successfully";
+    } catch (Exception $e) {
+        echo "Email failed. Error: {$mail->ErrorInfo}";
     }
-
-    // Change this to your admin email
-    $recipient = "pravinsamr@gmail.com";
-
-    $subject = "New Contact From Website: $name";
-
-    $email_content  = "Name: $name\n";
-    $email_content .= "Email: $email\n";
-    $email_content .= "Phone: $phone\n";
-    $email_content .= "Service: $service\n\n";
-    $email_content .= "Message:\n$message\n";
-
-    $email_headers = "From: $name <$email>";
-
-    if (mail($recipient, $subject, $email_content, $email_headers)) {
-        http_response_code(200);
-        echo "Thank You! Your message has been sent.";
-    } else {
-        http_response_code(500);
-        echo "Oops! Something went wrong and we couldn't send your message.";
-    }
-
-} else {
-    http_response_code(403);
-    echo "There was a problem with your submission. Try again.";
 }
-
 ?>
