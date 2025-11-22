@@ -15163,3 +15163,9 @@ footer.ltn__footer-area {
 .marginnn{
   margin-top: 100px !important;
 }
+
+.captcha{
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}

@@ -25,6 +25,7 @@
     <!-- Responsive css -->
     <link rel="stylesheet" href="css/responsive.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="preconnect" href="https://challenges.cloudflare.com">
 
 </head>
 
@@ -238,19 +239,19 @@
                         
                                 <div class="col-md-6">
                                     <div class="input-item input-item-name ltn__custom-icon">
-                                        <input type="text" name="name" placeholder="Enter your name" required>
+                                        <input type="text" name="name" placeholder="Enter your name" >
                                     </div>
                                 </div>
                         
                                 <div class="col-md-6">
                                     <div class="input-item input-item-phone ltn__custom-icon">
-                                        <input type="text" name="phone" placeholder="Enter phone Number" required>
+                                        <input type="text" name="phone" placeholder="Enter phone Number" >
                                     </div>
                                 </div>
                         
                                 <div class="col-md-6">
                                     <div class="input-item">
-                                        <select class="nice-select" name="service" required>
+                                        <select class="nice-select" name="service" >
                                             <option>Select Service Type</option>
                                             <option>Water Tank Cleaning</option>
                                             <option>Sump Cleaning</option>
@@ -260,7 +261,7 @@
                         
                                 <div class="col-md-6">
                                     <div class="input-item input-item-email ltn__custom-icon">
-                                        <input type="email" name="email" placeholder="Enter E-mail" required>
+                                        <input type="email" name="email" placeholder="Enter E-mail" >
                                     </div>
                                 </div>
                         
@@ -269,11 +270,20 @@
                             <div class="input-item input-item-textarea ltn__custom-icon">
                                 <textarea name="message" placeholder="Enter message" required></textarea>
                             </div>
-                        
-                            <div class="btn-wrapper mt-0">
-                                <button class="btn theme-btn-1 btn-effect-1 text-uppercase" type="submit">Submit</button>
+                            
+                            <div class="captcha">
+                                <div>
+                                    <div class="cf-turnstile" 
+                                         data-sitekey="0x4AAAAAACCV9tK8CDNFs2nY"
+                                         data-theme="light">
+                                    </div>
+                                </div>
+                            
+                                <div class="btn-wrapper mt--20" style="margin-top: -10px;">
+                                    <button class="btn theme-btn-1 btn-effect-1 text-uppercase" type="submit">Submit</button>
+                                </div>
+    
                             </div>
-                        
                             <p class="form-messege mb-0 mt-20"></p>
                         </form>
                     </div>
@@ -421,6 +431,27 @@
         </div>
     </div>
 
+
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <script>
+        function generateCaptcha() {
+            let n1 = Math.floor(Math.random() * 9) + 1;
+            let n2 = Math.floor(Math.random() * 9) + 1;
+            let ops = ["+", "-", "×"];
+            let op = ops[Math.floor(Math.random() * ops.length)];
+        
+            let ans = 0;
+            if (op === "+") ans = n1 + n2;
+            if (op === "-") ans = n1 - n2;
+            if (op === "×") ans = n1 * n2;
+        
+            document.getElementById("captcha_question").innerHTML = `What is ${n1} ${op} ${n2}?`;
+            document.getElementById("captcha_answer").value = ans;
+        }
+        
+        generateCaptcha();
+        </script>
+
     <script>
     (function (w, d, s, u) {
         w.gbwawc = {
@@ -455,6 +486,15 @@
     <!-- Main JS -->
     <script src="js/main.js"></script>
     <script src="js/readmore.js"></script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+<script>
+grecaptcha.ready(function() {
+    grecaptcha.execute('YOUR_SITE_KEY', {action: 'contact'}).then(function(token) {
+        document.getElementById('recaptcha_v3_token').value = token;
+    });
+});
+</script>
 
     <script>
         document.getElementById("contactForm").addEventListener("submit", function(e) {
