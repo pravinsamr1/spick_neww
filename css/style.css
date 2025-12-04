@@ -15174,3 +15174,14 @@ footer.ltn__footer-area {
   font-size: 35px !important;
 }
 
+.flex-service{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.serv-title{
+  margin-top: 20px;
+  text-align: center;
+}
