@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
        TURNSTILE CAPTCHA VERIFICATION
     ------------------------------------------- */
 
-    $secretKey = "0x4AAAAAACCV9vXEuRxLQyIPIGLohTQXfrA";  // <-- YOUR SECRET KEY
+    $secretKey = "0x4AAAAAACD-zkEU2r3Eo-gTP6kMUZWspVc";  // <-- YOUR SECRET KEY
     $token = $_POST["cf-turnstile-response"];
 
     $ch = curl_init("https://challenges.cloudflare.com/turnstile/v0/siteverify");
@@ -47,15 +47,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     try {
         $mail->isSMTP();
-        $mail->Host = 'smtp.gmail.com';
+        $mail->Host = 'smtp.hostinger.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'pravinsamr@gmail.com';
-        $mail->Password = 'iqimxmrwfnwqacwg'; // Gmail App Password
+        $mail->Username = 'website@spicktankclean.com';
+        $mail->Password = 'Spick1*23'; // Gmail App Password
         $mail->SMTPSecure = 'tls';
         $mail->Port = 587;
 
-        $mail->setFrom('pravinsamr@gmail.com', 'Website Contact Form');
-        $mail->addAddress('pravinsamr@gmail.com');
+        $mail->setFrom('website@spicktankclean.com', 'Website Contact Form');
+        $mail->addAddress('spicktankclean@gmail.com');
 
         $mail->Subject = "New Contact Form Submission";
         $mail->Body = "
