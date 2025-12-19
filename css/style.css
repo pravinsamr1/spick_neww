@@ -15185,3 +15185,17 @@ footer.ltn__footer-area {
   margin-top: 20px;
   text-align: center;
 }
+
+.style-area{
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+.service-item-img img{
+  border-radius: 30px;
+}
+
+.service-item-img:hover{
+  border-radius: 30px;
+}
+

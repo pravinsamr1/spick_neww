@@ -23,6 +23,47 @@
   <link rel="stylesheet" href="css/style.css" />
   <!-- Responsive css -->
   <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+<link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <style>
+    .areas-wrapper {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.areas-slider {
+  overflow: hidden;
+  width: 100%;
+}
+
+.areas-track {
+  display: flex;
+  gap: 40px;
+  width: max-content;
+  animation: scrollAreas 18s linear infinite;
+}
+
+.service-card {
+  min-width: 220px;
+  text-align: center;
+}
+
+.service-card img {
+  width: 100px;
+  margin: auto;
+}
+
+.service-card h2 {
+  font-size: 18px;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+@keyframes scrollAreas {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+  </style>
 </head>
 
 <body>
@@ -96,7 +137,7 @@
                 <div class="site-logo">
                   <a href="index.html">
                     <div class="log">
-                      <img src="spick-img/white-logo.png" width="180px" class="" alt="" />
+                      <img src="spick-img/logo.png" width="300px" class="" alt="" />
                     </div>
                   </a>
                 </div>
@@ -152,7 +193,7 @@
       <div class="ltn__utilize-menu-inner ltn__scrollbar">
         <div class="ltn__utilize-menu-head">
           <div class="site-logo">
-            <a href="index.html"><img src="spick-img/logo-2.png" class="logo-width m-l-w" alt="Logo" /></a>
+            <a href="index.html"><img src="spick-img/logo.png" class="logo-width m-l-w" alt="Logo" /></a>
           </div>
           <button class="ltn__utilize-close">×</button>
         </div>
@@ -196,14 +237,14 @@
       <div class="ltn__slide-one-active slick-slide-arrow-1 slick-slide-dots-1">
           <!-- ltn__slide-item -->
 
-          <div class="ltn__slide-item ltn__slide-item-2  ltn__slide-item-3-normal--- ltn__slide-item-3 bg-image bg-overlay-theme-black-60---" data-bg="spick-img/banner2.jpg">
+          <div class="ltn__slide-item ltn__slide-item-2  ltn__slide-item-3-normal--- ltn__slide-item-3 bg-image bg-overlay-theme-black-60---" data-bg="spick-img/banner44.jpg">
             <div class="ltn__slide-item-inner  text-center">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12 align-self-center">
                             <div class="slide-item-info">
                                 <div class="slide-item-info-inner ltn__slide-animation">
-                                    <h6 class="slide-sub-title ltn__secondary-color animated text-uppercase" style="color: #fff !important;"><span><i class="fas fa-square-full"></i></span> Great Experience In Cleaning</h6>
+                                    <h4 class="slide-sub-title ltn__secondary-color animated text-uppercase" style="color: #fff !important;"><span><i class="fas fa-square-full"></i></span> Great Experience In Cleaning</h4>
                                     <h1 class="slide-title animated " style="font-size: 50px; color: #fff;">Clean Tanks. Pure Water. <br> Healthy
                                       Living.</h1>
                                     <div class="slide-brief animated">
@@ -262,11 +303,7 @@
     <div class="ltn__about-us-area mt-50 pt-20 pb-70 index-about">
       <div class="container">
         <div class="row">
-          <div class="col-lg-6 align-self-center">
-            <div class="about-us-img-wrap about-img-left">
-              <img src="spick-img/abot-us.jpg" alt="About Us Image" />
-            </div>
-          </div>
+          
           <div class="col-lg-6 align-self-center">
             <div class="about-us-info-wrap">
               <div class="section-title-area ltn__section-title-2">
@@ -275,10 +312,10 @@
               <p class="about-p justify-para">
                 Welcome to <b>Spick Tank Cleaners</b>, your trusted partner in maintaining clean and hygienic water
                 storage systems. We specialize in <b>water tank cleaning, sump cleaning</b>, and underground tank
-                maintenance, ensuring your water stays pure, safe, and free from harmful contaminants. With a team of
+                maintenance ensuring your water stays pure, safe, and free from harmful contaminants. With a team of
                 trained professionals and advanced cleaning equipment, we provide efficient, eco-friendly, and
                 affordable cleaning solutions for both residential and commercial properties. Our step-by-step cleaning
-                process includes draining, sludge removal, high-pressure washing, and disinfection — leaving your tanks
+                process includes draining, sludge removal, high-pressure washing, and disinfection <span>with UV and Liquid Chlorin</span> — leaving your tanks
                 spotless and bacteria-free.
               </p>
 
@@ -288,6 +325,12 @@
                 household tank or a large industrial sump, we handle every job with care and precision.
               </p>
 
+            </div>
+          </div>
+
+          <div class="col-lg-6 align-self-center">
+            <div class="about-us-img-wrap about-img-left">
+              <img src="spick-img/abot-uss.jpg" alt="About Us Image" />
             </div>
           </div>
         </div>
@@ -350,7 +393,7 @@
           </div>
           <div class="row">
               <div class="col-lg-4 col-sm-6">
-                  <div class="ltn__service-item-1">
+                  <div class="ltn__service-item-1" style="border-radius: 30px;">
                       <div class="service-item-img">
                           <img src="spick-img/ke1.jpg" alt="#">
                       </div>
@@ -361,7 +404,7 @@
                   </div>
               </div>
               <div class="col-lg-4 col-sm-6">
-                  <div class="ltn__service-item-1">
+                  <div class="ltn__service-item-1" style="border-radius: 30px;">
                       <div class="service-item-img">
                           <img src="spick-img/ke2.jpg" alt="#">
                       </div>
@@ -372,7 +415,7 @@
                   </div>
               </div>
               <div class="col-lg-4 col-sm-6">
-                  <div class="ltn__service-item-1">
+                  <div class="ltn__service-item-1" style="border-radius: 30px;">
                       <div class="service-item-img">
                           <img src="spick-img/ke3.jpg" alt="#">
                       </div>
@@ -384,7 +427,7 @@
                   </div>
               </div>
               <div class="col-lg-4 col-sm-6">
-                  <div class="ltn__service-item-1">
+                  <div class="ltn__service-item-1" style="border-radius: 30px;">
                       <div class="service-item-img">
                           <img src="spick-img/ke4.jpg" alt="#">
                       </div>
@@ -395,7 +438,7 @@
                   </div>
               </div>
               <div class="col-lg-4 col-sm-6">
-                  <div class="ltn__service-item-1">
+                  <div class="ltn__service-item-1" style="border-radius: 30px;">
                       <div class="service-item-img">
                           <img src="spick-img/ke5.jpg" alt="#">
                       </div>
@@ -406,7 +449,7 @@
                   </div>
               </div>
               <div class="col-lg-4 col-sm-6">
-                  <div class="ltn__service-item-1">
+                  <div class="ltn__service-item-1" style="border-radius: 30px;">
                       <div class="service-item-img">
                           <img src="spick-img/ke6.jpg" alt="#">
                       </div>
@@ -418,7 +461,7 @@
                   </div>
               </div>
               <div class="col-lg-4 col-sm-6">
-                  <div class="ltn__service-item-1">
+                  <div class="ltn__service-item-1" style="border-radius: 30px;">
                       <div class="service-item-img">
                           <img src="spick-img/ke7.jpg" alt="#">
                       </div>
@@ -433,59 +476,33 @@
   </div>
   <!-- SERVICE AREA END -->
 
-    <!-- PROGRESS BAR AREA START -->
-    <div class="ltn__progress-bar-area pt-50 pb-40">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-              <div class="section-title-area ltn__section-title-2 text-center">
-                  <h1 class="section-title ffd">Areas We Serve</h1>
-              </div>
-          </div>
-      </div>
-        <div class="row">
-           <div class="col-lg-3 col-6 flex-service">
-            <div>
-              <img src="spick-img/industry.png" alt="" width="120px">
-            </div>
-            <div class="serv-title">
-              <h2>Industries</h2>
-            </div>
-           </div>
-
-           <div class="col-lg-3 col-6 flex-service">
-            <div>
-              <img src="spick-img/corporation.png" alt="" width="120px">
-            </div>
-            <div class="serv-title">
-              <h2>IT Parks</h2>
-            </div>
-           </div>
-
-           <div class="col-lg-3 col-6 flex-service">
-            <div>
-              <img src="spick-img/hotel.png" alt="" width="120px">
-            </div>
-            <div class="serv-title">
-              <h2>Hotels</h2>
-            </div>
-           </div>
-
-           <div class="col-lg-3 col-6 flex-service">
-            <div>
-              <img src="spick-img/mall.png" alt="" width="120px">
-            </div>
-            <div class="serv-title">
-              <h2>Malls</h2>
-            </div>
-           </div>
-
-           
-        
+  <div class="container">
+    <div class="areas-wrapper">
+      <h1 class="section-title style-area">Areas We Serve</h1>
+    
+      <div class="areas-slider">
+        <div class="areas-track">
+    
+          <!-- SET 1 -->
+          <div class="service-card"><img src="spick-img/house.png"><h2>Houses</h2></div>
+          <div class="service-card"><img src="spick-img/high-rise-building.png"><h2>High Rise Buildings</h2></div>
+          <div class="service-card"><img src="spick-img/industry.png"><h2>Industries</h2></div>
+          <div class="service-card"><img src="spick-img/corporation.png"><h2>IT Parks</h2></div>
+          <div class="service-card"><img src="spick-img/hotel.png"><h2>Hotels</h2></div>
+          <div class="service-card"><img src="spick-img/mall.png"><h2>Malls</h2></div>
+    
+          <!-- SET 2 (EXACT DUPLICATE) -->
+          <div class="service-card"><img src="spick-img/house.png"><h2>Houses</h2></div>
+          <div class="service-card"><img src="spick-img/high-rise-building.png"><h2>High Rise Buildings</h2></div>
+          <div class="service-card"><img src="spick-img/industry.png"><h2>Industries</h2></div>
+          <div class="service-card"><img src="spick-img/corporation.png"><h2>IT Parks</h2></div>
+          <div class="service-card"><img src="spick-img/hotel.png"><h2>Hotels</h2></div>
+          <div class="service-card"><img src="spick-img/mall.png"><h2>Malls</h2></div>
+    
         </div>
       </div>
     </div>
-    <!-- PROGRESS BAR AREA END -->
+  </div>
 
     <!-- CALL TO ACTION START (call-to-action-6) -->
 
@@ -505,9 +522,14 @@
             <div class="col-lg-4 col-sm-6">
               <div class="service-item-img">
                 <!-- <img src="img/service/1.jpg" alt="#"> -->
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/JJ4RAx5hBbw?si=EfzBPaTiSG6IybCm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/sZFakGPOm3E?si=wkTtraCctS27Kxcm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
               </div>
             </div>
+            <!-- <div class="col-lg-4 col-sm-6">
+              <div class="service-item-img">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/JJ4RAx5hBbw?si=EfzBPaTiSG6IybCm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+            </div> -->
             <div class="col-lg-4 col-sm-6">
               <div class="service-item-img">
                 <iframe
@@ -585,7 +607,7 @@
               <div class="footer-widget footer-about-widget">
                 <div class="footer-logo">
                   <div class="site-logo">
-                    <img src="spick-img/white-logo.png" alt="Logo" />
+                    <img src="spick-img/logo.png" alt="Logo" />
                   </div>
                 </div>
                 <p style="color: #fff;">
@@ -713,10 +735,26 @@
 
   <!-- All JS Plugins -->
   <script src="js/plugins.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
   <!-- Main JS -->
   <script src="js/main.js"></script>
 
   <script src="js/readmore.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $('.ltn__slide-one-active').slick({
+        autoplay: true,
+        autoplaySpeed: 5000, // 5 seconds
+        dots: true,
+        arrows: true,
+        infinite: true,
+        speed: 800,
+        pauseOnHover: false,
+        pauseOnFocus: false
+      });
+    });
+  </script>
 
   <script>
     (function (w, d, s, u) {
@@ -780,6 +818,26 @@
     }, { threshold: 0.3 });
 
     observer.observe(section);
+  </script>
+
+
+<script>
+  $(document).ready(function () {
+    $(".areas-carousel").owlCarousel({
+      loop: true,
+      margin: 20,
+      autoplay: true,
+      autoplayTimeout: 2500,
+      smartSpeed: 800,
+      dots: false,
+      nav: false,
+      responsive: {
+        0: { items: 2 },
+        768: { items: 3 },
+        1024: { items: 4 }
+      }
+    });
+  });
   </script>
 
 </body>

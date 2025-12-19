@@ -58,15 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->addAddress('spicktankclean@gmail.com');
 
         $mail->Subject = "New Contact Form Submission";
-        $mail->Body = "
-Name: $name
-Email: $email
-Phone: $phone
-Service: $service
-
-Message:
-$message
-";
+        $mail->Body = "Name: $nameEmail: $emailPhone: $phoneService: $serviceMessage:$message";
 
         $mail->send();
         echo "Message sent successfully";
